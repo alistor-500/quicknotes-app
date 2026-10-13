@@ -12,6 +12,7 @@ QuickNotes is a small browser-based notes app built with plain HTML, CSS and Jav
 - Colour-coded category cards
 - Notes saved with localStorage
 - Responsive layout for small screens
+- Clear all button with a confirmation prompt
 
 ## How to run locally
 
