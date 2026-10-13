@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #eef2f5;
+  color: #222;
+  line-height: 1.5;
+}
+
+header {
+  background: #1f4e79;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 0.25rem 0 0;
+}
+
+/* Centred main column, 700px at most */
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* White section cards with rounded corners */
+main section {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+main section h2 {
+  margin-top: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #dde3e8;
+  font-size: 0.9rem;
+}
+
+/* Form laid out with Flexbox */
+#note-form {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#note-form input[type="text"] {
+  flex: 1;
+  min-width: 180px;
+}
+
+input, select, button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+#search-input {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+button {
+  background: #1f4e79;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #143550;
+}
+
+/* Error message in red */
+#error-message {
+  color: #c00000;
+  font-weight: bold;
+  min-height: 1.5rem;
+  margin-bottom: 0;
+}
+
+#notes-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Each note is a card */
+.note {
+  background: #fafafa;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-left-width: 6px;
+  border-radius: 8px;
+  margin: 0.75rem 0;
+}
+
+.note .badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.note p {
+  margin: 0.5rem 0;
+  overflow-wrap: anywhere;
+}
+
+.note small {
+  display: block;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+/* Each category has its own colour */
+.category-personal { border-left-color: teal; }
+.category-personal .badge { background: teal; }
+
+.category-work { border-left-color: darkred; }
+.category-work .badge { background: darkred; }
+
+.category-study { border-left-color: #1e6fd9; }
+.category-study .badge { background: #1e6fd9; }
+
+.delete-btn {
+  background: #c0392b;
+}
+
+.delete-btn:hover {
+  background: #922b21;
+}
+
+/* 600px or narrower: stack the form */
+@media (max-width: 600px) {
+  #note-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
